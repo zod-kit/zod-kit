@@ -1,1 +1,1 @@
-export { slug } from "./slug.js";
+export { slug } from './slug.js';

@@ -1,0 +1,6 @@
+{
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.tabSize": 2, // یا 4، بسته به انتخابتون
+	"editor.insertSpaces": true // اگر space انتخاب کردید
+}
