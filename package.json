@@ -1,0 +1,35 @@
+{
+	"name": "zod-kit",
+	"version": "0.0.0",
+	"description": "A collection of utilities and extensions for Zod.",
+	"main": "index.js",
+	"scripts": {
+		"build": "tsc && tsdown",
+		"test": "vitest",
+		"test:watch": "vitest --watch",
+		"docs:dev": "tsdown --dev",
+		"docs:build": "tsdown",
+		"docs:serve": "tsdown --serve",
+		"format": "biome format --write",
+		"lint": "biome lint --fix",
+		"check": "biome check --write"
+	},
+	"author": "",
+	"license": "MIT",
+	"exports": {
+		".": {
+			"import": "./index.js",
+			"types": "./index.d.ts"
+		}
+	},
+	"packageManager": "pnpm@10.24.0",
+	"devDependencies": {
+		"@biomejs/biome": "2.3.10",
+		"tsdown": "^0.18.2",
+		"typescript": "^5.9.3",
+		"vitest": "^4.0.16"
+	},
+	"peerDependencies": {
+		"zod": "^3.25.0 || ^4.0.0"
+	}
+}
