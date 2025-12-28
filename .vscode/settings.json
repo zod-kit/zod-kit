@@ -4,5 +4,9 @@
 	"editor.tabSize": 2,
 	"editor.insertSpaces": true,
 	"biome.configurationPath": "../biome.json",
-	"biome.enabled": true
+	"biome.enabled": true,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports.biome": "explicit",
+		"source.fixAll.biome": "explicit"
+	}
 }
