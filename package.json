@@ -2,24 +2,52 @@
 	"name": "zod-kit",
 	"version": "0.0.0",
 	"description": "A collection of utilities and extensions for Zod.",
-	"main": "index.js",
+	"types": "./dist/index.d.ts",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"sideEffects": false,
+	"files": [
+		"dist"
+	],
 	"scripts": {
-		"build": "tsc && tsdown",
+		"dev": "tsdown --watch",
+		"build": "tsdown",
+		"build:clean": "tsdown --clean && tsdown",
+
 		"test": "vitest",
 		"test:watch": "vitest --watch",
-		"docs:dev": "tsdown --dev",
-		"docs:build": "tsdown",
-		"docs:serve": "tsdown --serve",
+		"test:run": "vitest run",
+		"test:coverage": "vitest run --coverage",
+
+		"typecheck": "tsc --noEmit",
 		"format": "biome format --write",
 		"lint": "biome lint --fix",
-		"check": "biome check --write"
+		"check": "biome check --write",
+
+		"prepublish": "pnpm run build:clean && pnpm run typecheck && pnpm run test:run"
 	},
-	"author": "",
+	"author": "Navidtm",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Navidtm/zod-kit.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Navidtm/zod-kit/issues"
+	},
+	"homepage": "https://github.com/Navidtm/zod-kit#readme",
+	"keywords": [
+		"zod",
+		"validation",
+		"typescript",
+		"schema",
+		"utils",
+		"extensions"
+	],
 	"license": "MIT",
 	"exports": {
 		".": {
-			"import": "./index.js",
-			"types": "./index.d.ts"
+			"import": "./dist/index.mjs",
+			"types": "./dist/index.d.ts"
 		}
 	},
 	"packageManager": "pnpm@10.24.0",
