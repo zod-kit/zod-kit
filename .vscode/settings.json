@@ -1,6 +1,8 @@
 {
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "biomejs.biome",
-	"editor.tabSize": 2, // یا 4، بسته به انتخابتون
-	"editor.insertSpaces": true // اگر space انتخاب کردید
+	"editor.tabSize": 2,
+	"editor.insertSpaces": true,
+	"biome.configurationPath": "../biome.json",
+	"biome.enabled": true
 }
