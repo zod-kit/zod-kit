@@ -1,6 +1,6 @@
 {
 	"name": "zod-kit",
-	"version": "0.0.0",
+	"version": "0.0.2",
 	"description": "A collection of utilities and extensions for Zod.",
 	"types": "./dist/index.d.ts",
 	"main": "./dist/index.js",
@@ -13,18 +13,17 @@
 		"dev": "tsdown --watch",
 		"build": "tsdown",
 		"build:clean": "tsdown --clean && tsdown",
-
 		"test": "vitest",
 		"test:watch": "vitest --watch",
 		"test:run": "vitest run",
 		"test:coverage": "vitest run --coverage",
-
 		"typecheck": "tsc --noEmit",
 		"format": "biome format --write",
 		"lint": "biome lint --fix",
 		"check": "biome check --write",
-
-		"prepublish": "pnpm run build:clean && pnpm run typecheck && pnpm run test:run"
+		"prepublish": "pnpm run build:clean && pnpm run typecheck && pnpm run test:run",
+		"bump": "changelogen --bump",
+		"release": "changelogen --release"
 	},
 	"author": "Navidtm",
 	"repository": {
